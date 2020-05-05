@@ -1,0 +1,43 @@
+/* proprietary style file */
+
+.nav {
+    position: relative;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 42px;
+    background: #fff url(../images/rss.png) no-repeat right center;
+}
+
+.nav ul {
+    position: absolute;
+}
+
+.nav li {
+    margin-right: 19px;
+    float: left;
+}
+
+.nav li:last-child {
+    margin-right: 0;
+}
+
+.cloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 83px;
+    height: 42px;
+    background: url(../images/cloud.gif) no-repeat;
+}
+
+.nav li a {
+    transition: .3s;
+}
+
+.nav li:hover a {
+    color: #fff;
+}
+
+.nav li.current a {
+    color: red;
+}
