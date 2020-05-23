@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML表单标签</title>
+</head>
+
+<body style="background-color:#F0F8FF">
+    <h3>&emsp;欢迎进入注册页面！</h3>
+    <!--action=""，当提交表单时，向何处发送表单数据-->
+    <form action="" method="post" name="myForm">
+        <table width="280">
+            <tr>
+                <td>姓名</td>
+                <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <label for="nan">男</label>
+                    <input type="radio" checked="checked" name="Sex" value="male" id="nan" />
+                    <label for="nv">女</label>
+                    <input type="radio" name="Sex" value="female" id="nv" />
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" name="password" /></td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <label for="book">看书</label>
+                    <input type="checkbox" name="lbook" id="book">
+                    <label for="music">听音乐</label>
+                    <input type="checkbox" name="lmusic" id="music">
+                </td>
+            </tr>
+            <tr>
+                <td>所在地</td>
+                <td>
+                    <select name="place">
+                        <option value="shandong">山东</option>
+                        <!--属性=“属性”，默认选中，若无selected="selected"，则默认选中“山东”-->
+                        <option value="hunan" selected="selected">湖南</option>
+                        <option value="hebei">河北</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>个人简介</td>
+                <td><textarea name="textarea" cols="20" rows="5">请做个自我介绍哦！</textarea></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="注册" />&emsp;<input type="reset" value="重置" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
