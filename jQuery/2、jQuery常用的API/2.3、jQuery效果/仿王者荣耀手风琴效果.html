@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿王者荣耀手风琴效果</title>
+    <script src="../../jquery.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .king {
+            width: 852px;
+            margin: 100px auto;
+            background: url(images/bg.png) no-repeat;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .king ul {
+            overflow: hidden;
+        }
+
+        .king li {
+            position: relative;
+            float: left;
+            width: 69px;
+            height: 69px;
+            margin-right: 10px;
+        }
+
+        .king li.current {
+            width: 224px;
+        }
+
+        .king li.current .big {
+            display: block;
+        }
+
+        .king li.current .small {
+            display: none;
+        }
+
+        .big {
+            width: 224px;
+            display: none;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        // find() 方法返回被选元素的后代元素，后代是子、孙、曾孙，依此类推。
+        $(function () {
+            $('.king li').mouseenter(function () {
+                // 当前 li 宽度变为 224px， 同时里面的小图片淡出，大图片淡入
+                $(this).animate({
+                    width: 224
+                }).find('.small').stop().fadeOut().siblings('.big').stop().fadeIn();
+                // 其余兄弟 li 宽度变为69px， 小图片淡入， 大图片淡出
+                $(this).siblings("li").stop().animate({
+                    width: 69
+                }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="king">
+        <ul>
+            <li class="current">
+                <a href="#">
+                    <img src="images/lianPo1.jpg" alt="" class="small">
+                    <img src="images/lianPo2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/laoFuZi1.jpg" alt="" class="small">
+                    <img src="images/laoFuZi2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/yuJi1.jpg" alt="" class="small">
+                    <img src="images/yuJi2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/baiLi1.jpg" alt="" class="small">
+                    <img src="images/baiLi2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/197.jpg" alt="" class="small">
+                    <img src="images/197-freehover.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/504.jpg" alt="" class="small">
+                    <img src="images/504-freehover.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/505.jpg" alt="" class="small">
+                    <img src="images/505-freehover.png" alt="" class="big">
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

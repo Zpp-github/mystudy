@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tab bar switch</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        * {
+            /* clear inner and outer margins */
+            margin: 0;
+            padding: 0;
+            /* The box size is width, padding and border will not stretch the big box */
+            box-sizing: border-box;
+        }
+
+        body {
+            /* css3 anti aliasing for clearer text display */
+            -webkit-font-smoothing: antialiased;
+            background-color: #fff;
+            /* \5B8B\4F53  song style —— avoid the problem of garbled code when the browser parses css code */
+            font: 14px/1 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+            color: #333;
+        }
+
+        .tab {
+            width: 1226px;
+            margin: 100px auto;
+        }
+
+        .tab_list {
+            height: 40px;
+            line-height: 40px;
+            background-color: #fafafa;
+            border-bottom: 1px solid #e85356;
+        }
+
+        .tab_list li {
+            float: left;
+            padding: 0 20px;
+            font-size: 16px;
+            list-style: none;
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+        .current {
+            color: #fff;
+            background-color: #c81623;
+        }
+
+        .tab_con {
+            margin-left: 50px;
+        }
+
+        .tab .tab_con caption {
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .tab .tab_con tr td {
+            line-height: 24px;
+            padding-right: 60px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.tab_list li').click(function () {
+                // Click "li" in the upper part, add "current" class in current "li", and remove other brothers
+                $(this).addClass('current').siblings().removeClass('current');
+                // Click to get the index number of the current "li"
+                var index = $(this).index();
+                // Let the "item" with corresponding index numbers in the lower part show, and the rest "item" hide
+                $('.tab_con .item').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价(1.1万+)</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                <table>
+                    <caption>品牌：康佳( KONKA )</caption>
+                    <tr>
+                        <td>商品名称：康佳B65U</td>
+                        <td>商品编号：8514653</td>
+                        <td>商品毛重：31.35kg</td>
+                    </tr>
+                    <tr>
+                        <td>观看距离：3m-3.5m ( 56-65英寸 )</td>
+                        <td>分辨率：4k超高清 ( 3840x2160 )</td>
+                        <td>电视类型：人工智能、大屏、4k超清</td>
+                    </tr>
+                    <tr>
+                        <td>屏幕尺寸：65英寸</td>
+                        <td>选购指数：10.0-8.0</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item" style="display: none;">
+                规格与包装模块内容
+            </div>
+            <div class="item" style="display: none;">
+                售后保障模块内容
+            </div>
+            <div class="item" style="display: none;">
+                商品评价(1.1万+)模块内容
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
