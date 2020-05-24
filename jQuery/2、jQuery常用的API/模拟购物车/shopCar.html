@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模拟购物车案例</title>
+    <!-- 引入购物车样式文件 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入js文件 -->
+    <script src="../../jquery.min.js"></script>
+    <script src="cart.js"></script>
+</head>
+
+<body>
+    <table>
+        <!-- 头部全选模块 -->
+        <thead>
+            <tr>
+                <th><input type="checkbox" class="checkall">全选</th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <!-- 商品详细模块 -->
+        <tbody>
+            <tr class="cart-item">
+                <td><input type="checkbox" class="j-checkbox"></td>
+                <td>iPhone8</td>
+                <td class="p-price">￥8000</td>
+                <td class="p-num">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value="1">
+                    <a href="javascript:;" class="increment">+</a>
+                </td>
+                <td class="p-sum">￥8000</td>
+                <td class="p-action"><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr class="cart-item">
+                <td><input type="checkbox" class="j-checkbox"></td>
+                <td>iPad Pro</td>
+                <td class="p-price">￥5000</td>
+                <td class="p-num">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value="1">
+                    <a href="javascript:;" class="increment">+</a>
+                </td>
+                <td class="p-sum">￥5000</td>
+                <td class="p-action"><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr class="cart-item">
+                <td><input type="checkbox" class="j-checkbox"></td>
+                <td>iPad Air</td>
+                <td class="p-price">￥2000</td>
+                <td class="p-num">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value="1">
+                    <a href="javascript:;" class="increment">+</a>
+                </td>
+                <td class="p-sum">￥2000</td>
+                <td class="p-action"><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr class="cart-item">
+                <td><input type="checkbox" class="j-checkbox"></td>
+                <td>Apple Watch</td>
+                <td class="p-price">￥2000</td>
+                <td class="p-num">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value="1">
+                    <a href="javascript:;" class="increment">+</a>
+                </td>
+                <td class="p-sum">￥2000</td>
+                <td class="p-action"><a href="javascript:;">删除</a></td>
+            </tr>
+            <!-- 结算模块 -->
+            <tr>
+                <td><input type="checkbox" name="" id="" class="checkall">全选</td>
+                <td></td>
+                <td></td>
+                <td class="amount-sum">已选<em>0</em>件商品</td>
+                <td class="price-sum">总价：<em>￥0</em></td>
+                <td><a href="javascript:;" class="clear-all">全部删除</a></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:;" class="remove-batch">删除选中的商品</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="btn-area">去结算</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

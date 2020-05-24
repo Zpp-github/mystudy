@@ -1,0 +1,117 @@
+/* 公共样式 */
+* {
+    /* 清除内边距、外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid #e7e7e7;
+    border-right: none;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px 20px;
+    border-bottom: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+}
+
+th {
+    color: #fff;
+    background-color: deepskyblue;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e33333;
+}
+
+em {
+    /* 斜体的文字不倾斜 */
+    font-style: normal;
+}
+
+button {
+    /* 当鼠标经过button时，鼠标变成小手形状 */
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉默认的灰色边框 */
+    border: 0;
+    /* 去掉默认的获得焦点后的蓝色边框 */
+    outline: none;
+}
+
+/* 商品详细模块 */
+.decrement,
+.increment {
+    float: left;
+    border: 1px solid #cacbcb;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 16px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    background: #fff;
+    margin-left: -1px;
+}
+
+.itxt {
+    float: left;
+    border: 1px solid #cacbcb;
+    width: 42px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    margin-left: -1px;
+    font-size: 12px;
+    font-family: verdana;
+    color: #333;
+    -webkit-appearance: none;
+}
+
+.p-sum {
+    font-weight: 700;
+}
+
+/* 结算模块 */
+.amount-sum em {
+    font-weight: 700;
+    color: #E2231A;
+    padding: 0 3px;
+}
+
+.price-sum em {
+    font-size: 16px;
+    color: #E2231A;
+    font-weight: 700;
+}
+
+.btn-area {
+    font-weight: 700;
+    color: #E2231A;
+    font-size: 16px;
+}
+
+/* 选中的商品的背景 */
+.check-cart-item {
+    background-color: lavender;
+}
