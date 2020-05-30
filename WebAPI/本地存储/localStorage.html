@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>localStorage</title>
+</head>
+
+<body>
+    username: <input type="text" class="uname">
+    password: <input type="password" class="pwd">
+    <button class="set">store data</button>
+    <button class="get">get data</button>
+    <button class="removeUname">delete username</button>
+    <button class="removePassword">delete password</button>
+    <button class="del">clear all data</button>
+    <script>
+        // Life cycle permanent
+        
+        // get element
+        var uname = document.querySelector('.uname');
+        var pwd = document.querySelector('.pwd');
+        var set = document.querySelector('.set');
+        var get = document.querySelector('.get');
+        var removeUname = document.querySelector('.removeUname');
+        var removepwd = document.querySelector('.removePassword');
+        var del = document.querySelector('.del');
+
+        set.addEventListener('click', function () {
+            // When we click, we can store the values in the form.
+            var unameValue = uname.value;
+            var pwdValue = pwd.value;
+            localStorage.setItem('uname', unameValue);
+            localStorage.setItem('pwd', pwdValue);
+        });
+        get.addEventListener('click', function () {
+            // When we click, we can get the values in the form.
+            console.log('username: ' + localStorage.getItem('uname'));
+            console.log('password: ' + localStorage.getItem('pwd'));
+        });
+        removeUname.addEventListener('click', function () {
+            // When we click, delete the user name data.
+            localStorage.removeItem('uname');
+        });
+        removepwd.addEventListener('click', function () {
+            // When we click, delete the user password.
+            localStorage.removeItem('pwd');
+        });
+        del.addEventListener('click', function () {
+            // When we click, clear all data.
+            localStorage.clear();
+        });
+    </script>
+</body>
+
+</html>
