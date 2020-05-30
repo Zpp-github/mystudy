@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .sliderbar {
+            position: fixed;
+            right: 0;
+            bottom: 100px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .con {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 40px;
+            background-color: red;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliderbar">
+        <span>←</span>
+        <div class="con">返回顶部</div>
+    </div>
+
+    <script>
+        // 获取元素
+        var sliderbar = document.querySelector('.sliderbar');
+        var con = document.querySelector('.con');
+        // 鼠标经过 sliderbar 时让 con 盒子滑动到左侧
+        // 鼠标离开 sliderbar 时让 con 盒子滑动到右侧
+        sliderbar.addEventListener('mouseenter', function () {
+            // animate(obj, target, callback);
+            animate(con, -160, function () {
+                // 动画执行完毕，就把 ← 改为 →
+                sliderbar.children[0].innerHTML = '→';
+            });
+        })
+        sliderbar.addEventListener('mouseleave', function () {
+            // animate(obj, target, callback);
+            animate(con, 0, function () {
+                sliderbar.children[0].innerHTML = '←';
+            });
+        })
+
+        function animate(obj, target, callback) {
+            // callback = function() {}  调用：callback()
+            // 先清除以前的定时器，只保留当前的一个定时器执行
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                // 步长值写到定时器的里面
+                // 把步长值改为整数 不要出现小数的问题
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    // 停止动画 本质是停止定时器
+                    clearInterval(obj.timer);
+                    // 回调函数写到定时器结束里面
+                    // if (callback) {
+                    //     // 调用函数
+                    //     callback();
+                    // }
+                    callback && callback();
+                }
+                // 把每次加1这个步长值改为一个慢慢变小的值:step
+                // 步长(step)公式：(目标值 - 现在的位置) / 10
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 15);
+        }
+    </script>
+</body>
+
+</html>
