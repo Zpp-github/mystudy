@@ -1,0 +1,125 @@
+/* 初始化样式文件 */
+
+* {
+    /* 清除内边距、外边距 */
+    margin: 0;
+    padding: 0;
+    /* 盒子大小为 width，padding和border不会撑大盒子 */
+    box-sizing: border-box;
+}
+/* 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 清除li的列表样式 */
+li {
+    list-style: none;
+}
+
+img {
+    /* 清除图片边框，照顾低版本浏览器，如果图片外面包含了链接会有边框问题 */
+    border: 0;
+    /* 清除图片底侧有空白缝隙的问题 */
+    vertical-align: middle;
+}
+/* 当鼠标经过button时，鼠标变成小手形状 */
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button,
+input {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉默认的灰色边框 */
+    border: 0;
+    /* 去掉默认的获得焦点后的蓝色边框 */
+    outline: none;
+}
+
+input[type=checkbox],
+input[type=submit] {
+    cursor: pointer;
+}
+
+a {
+    color: #757575;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.link:hover {
+    color: #FF6700;
+}
+
+body {
+    /* css3抗锯齿形，让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    /* \5B8B\4F53  宋体 避免浏览器解析CSS代码时候出现乱码的问题 */
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+}
+
+/* 将相应元素隐藏 */
+.none {
+    display: none!important;
+}
+
+/* 将相应元素隐藏 */
+.hide {
+    display: block;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+/* 哪里需要清除浮动，就给哪个标签添加 class="clearfix"  */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+.clearfix {
+    *zoom: 1
+}
+
+		/* 声明字体图标 此处一定要注意路径问题*/
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('../fonts/icomoon.eot?7buwq3');
+            src:  url('../fonts/icomoon.eot?7buwq3#iefix') format('embedded-opentype'),
+              url('../fonts/icomoon.ttf?7buwq3') format('truetype'),
+              url('../fonts/icomoon.woff?7buwq3') format('woff'),
+              url('../fonts/icomoon.svg?7buwq3#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+          }
+        .icomoon {
+            font-family: 'icomoon';
+        }
+        /* 版心 */
+        .com {
+            width: 1226px;
+            margin: 0 auto;
+        }
+        
+        /* 盒子左浮动 */
+        .fl {
+            float: left;
+        }
+        /* 盒子右浮动 */
+        .fr {
+            float: right;
+        }
+        
+        .style_color1 {
+            color: #fff;
+        }
+        
+        .style_color2 {
+            color: #FF6700;
+        }
