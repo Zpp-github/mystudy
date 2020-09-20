@@ -1,3 +1,6 @@
+- [demo](https://zpp-github.github.io/mystudy/ECharts/index.html)
+- [笔记](https://github.com/Zpp-github/mystudy/blob/master/ECharts/note.md)
+
 ### 01-使用技术
 #### 技术栈
 - 基于flexible.js+rem智能大屏适配
