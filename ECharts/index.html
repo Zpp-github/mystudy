@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <!-- 标题 -->
+        <h1>数据可视化-ECharts</h1>
+        <!-- 右侧当前时间 -->
+        <div class="showTime"></div>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <!-- 第一列 -->
+        <div class="column">
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel bar bar1">
+                <!-- 公共面板标题 -->
+                <h2>柱形图-就业行情</h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel line line1">
+                <!-- 公共面板标题 -->
+                <h2>
+                    折线图-人员变化
+                    <a href="javascript:;">2020</a>
+                    <a href="javascript:;">2021</a>
+                </h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel pie pie1">
+                <!-- 公共面板标题 -->
+                <h2>饼形图-年龄分布</h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <!-- 第二列 -->
+        <div class="column">
+            <!-- no模块 -->
+            <div class="no">
+                <!-- 数字 -->
+                <div class="no-hd">
+                    <ul>
+                        <li>13876</li>
+                        <li>21325</li>
+                    </ul>
+                </div>
+                <!-- 相关文字说明 -->
+                <div class="no-bd">
+                    <ul>
+                        <li>前端需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="map">
+                <!-- 球体盒子 -->
+                <div class="map1"></div>
+                <!-- 旋转球体 -->
+                <div class="map2"></div>
+                <!-- 旋转箭头 -->
+                <div class="map3"></div>
+                <!-- 地图 -->
+                <div class="chart"></div>
+            </div>
+        </div>
+        <!-- 第三列 -->
+        <div class="column">
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel bar bar2">
+                <!-- 公共面板标题 -->
+                <h2>柱形图-技能掌握</h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel line line2">
+                <!-- 公共面板标题 -->
+                <h2>折线图-播放量</h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- panel 公共面板，bar 柱形图-->
+            <div class="panel pie pie2">
+                <!-- 公共面板标题 -->
+                <h2>饼形图-地区分布</h2>
+                <!-- 图标内容 -->
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var showTime = document.querySelector('.showTime');
+        getTime();
+        var timer = setInterval(getTime, 1000);
+        function getTime() {
+            var time = new Date();
+            var year = time.getFullYear();
+            var month = time.getMonth() + 1;
+            month = month < 10 ? '0' + month : month;
+            var date = time.getDate();
+            date = date < 10 ? '0' + date : date;
+            var hours = time.getHours();
+            hours = hours < 10 ? '0' + hours : hours;
+            var minutes = time.getMinutes();
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var seconds = time.getSeconds();
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            showTime.innerHTML = '当前时间：' + year + '年' + month + '月' + date + '日-' + hours + '时' + minutes + '分' + seconds + '秒';
+        }
+    </script>
+
+    <!-- 引入屏幕适配js -->
+    <script src="js/flexible.js"></script>
+    <!-- 引入ECharts库 4.9.0 -->
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- 引入中国地图文件js -->
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+    <!-- 引入第二列中间的地图模块文件js -->
+    <script src="js/myMap.js"></script>
+</body>
+
+</html>
