@@ -123,8 +123,8 @@ var option = {
 myChart.setOption(option);
 ```
 
-- [demo]()
-- 位置：ECharts/ECharts练习.html
+- [demo](https://zpp-github.github.io/mystudy/ECharts/ECharts%E7%BB%83%E4%B9%A0.html)
+- 位置：[ECharts/ECharts练习.html](https://github.com/Zpp-github/mystudy/blob/master/ECharts/ECharts%E7%BB%83%E4%B9%A0.html)
 
 #### Echarts基础配置
 - [配置项手册](https://echarts.apache.org/zh/option.html#title)
