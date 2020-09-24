@@ -1,7 +1,3 @@
-[TOC]
-
-因为是模拟仿造，所以样式比较简便
-
 <img src="images/模拟购物车.png" style=" display:block; margin:0 auto; ">
 
 ### 思路
