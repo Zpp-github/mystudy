@@ -1,0 +1,22 @@
+<view>
+  {{aa}}
+</view>
+
+<view class="myHeader">
+  <view class="myHeader_title">
+    <!-- <view class="title_item active">首页</view>
+    <view class="title_item">原创</view>
+    <view class="title_item">分类</view>
+    <view class="title_item">关于</view> -->
+
+    <view
+    wx:for="{{myHeader}}"
+    wx:key="id"
+    class="title_item {{item.isActive?'active':''}}"
+    bindtap="handleItemTap"
+    data-index="{{index}}"
+    > {{item.name}} </view>
+
+  </view>
+  <view class="myHeader_content">内容</view>
+</view>

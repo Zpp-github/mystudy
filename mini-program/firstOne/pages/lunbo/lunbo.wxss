@@ -1,0 +1,10 @@
+/* pages/lunbo/lunbo.wxss */
+
+swiper {
+  width: 100%;
+  /* height: calc(100vw * 352 /  1125); */
+  height: 31.28vw;
+}
+swiper image {
+  width: 100%;
+}

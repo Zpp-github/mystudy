@@ -1,0 +1,43 @@
+<!--pages/demo03/demo03.wxml-->
+
+<button
+  type="default"
+  size="mini"
+  >mini按钮</button>
+
+<button 
+  type="default"
+  size="{{defaultSize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+>default</button>
+
+<button 
+  type="primary"
+  size="{{defaultSize}}"
+  loading="{{loading}}"
+  plain="{{plain}}"
+>primary</button>
+
+<button 
+  type="warn"
+  size="{{defaultSize}}"
+  loading="{{loading}}"
+>warn</button>
+
+<button 
+  type="warn"
+  size="{{defaultSize}}"
+  loading="{{loading}}"
+  plain="{{true}}"
+>镂空warn</button>
+
+
+<button open-type="contact"> contact </button>
+<button open-type="share"> share </button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getphonenumber"> getPhoneNumber </button>
+<button open-type="getUserInfo"> getUserInfo </button>
+<button open-type="launchApp"> launchApp </button>
+<button open-type="openSetting"> openSetting </button>
+<button open-type="feedback"> feedback </button>
+

@@ -1,0 +1,52 @@
+<!--pages/demo01/demo01.wxml-->
+<text>pages/demo01/demo01.wxml</text>
+
+<!-- 字符串 -->
+<view> {{msg}}</view>
+<!-- 数字类型 -->
+<view> {{num}}</view>
+<!-- bool类型 -->
+<view> 学废了吗?{{yORn}} </view>
+<!-- object类型 -->
+<view> {{person.name}} </view>
+<view> {{person.age}} </view>
+<view> {{person.weight}} </view>
+<view> {{person.height}} </view>
+<view id="{{id}}"> haha</view>
+
+<view>
+  <checkbox checked="{{isChecked}}"> </checkbox>
+</view>
+<view>{{"hello, " + name}}</view>
+
+<view wx:for="{{array}}" wx:key="id">
+  {{index}}: {{item.message}} + {{item.id}}
+</view>
+
+<block wx:for="{{[1,2,3]}}" wx:key="*this" >
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block>
+
+<view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+  属性：{{key}} -- 值：{{value}}
+</view>
+
+<view>
+  <view>条件渲染</view>
+  <view wx:if="{{true}}">显示</view>
+  <view wx:if="{{false}}">隐藏</view>
+  <view wx:if="{{false}}">1</view>
+  <view wx:if="{{true}}">2</view>
+  <view wx:else>3</view>
+  <view wx:if="{{false}}">4</view>
+  <view wx:if="{{false}}">5</view>
+  <view wx:else>6</view>
+</view>
+
+<view hidden="{{false}}"> True </view>
+
+<input type="text" bindinput="handleInput" />
+<button bindtap="handleTap" data-operation="{{1}}">+</button>
+<button bindtap="handleTap" data-operation="{{-1}}">-</button>
+<view>{{num}}</view>

@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/demo05/demo05",
+    "pages/demo04/demo04",
+    "pages/demo03/demo03",
+    "pages/lunbo/lunbo",
+    "pages/demo02/demo02",
+    "pages/demo01/demo01",
+    "pages/index/index",
+    "pages/img/img",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#00ffff",
+    "navigationBarTitleText": "我的应用",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true,
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text":"首页",
+      "iconPath": ""
+    },
+    {
+      "pagePath": "pages/img/img",
+      "text":"图片",
+      "iconPath": ""
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text":"我的",
+      "iconPath": ""
+    }],
+    "position": "top"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

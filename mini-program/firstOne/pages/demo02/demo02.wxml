@@ -1,0 +1,20 @@
+<!--pages/demo02/demo02.wxml-->
+<text>pages/demo02/demo02.wxml</text>
+
+<view class="box"> haha </view>
+
+<text user-select="true" decode="true" > haha &nbsp; yeah</text>
+
+
+<!-- 相对路径：pages\lunbo\lunbo.wxml -->
+<navigator url="/pages/lunbo/lunbo">轮播图页面</navigator>
+<navigator url="/pages/lunbo/lunbo" open-type="redirect">轮播图页面(open-type="redirect")</navigator>
+<!-- 如果无法跳转注意检查路径：
+1. 路径复制过来后需要修改斜杠，"\" -> "/"，并将.wxml删掉
+2. 如果仍无法跳转就检查一下是否为跳转到tabBar页面，如果是，就添加open-type="switchTab" -->
+
+<navigator url="/pages/index/index" open-type="switchTab">首页</navigator>
+
+
+<rich-text nodes="{{html}}"></rich-text>
+<rich-text nodes="{{nodes}}"></rich-text>

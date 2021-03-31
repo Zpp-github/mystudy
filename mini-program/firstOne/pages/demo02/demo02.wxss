@@ -1,0 +1,11 @@
+/* pages/demo02/demo02.wxss */
+@import "../../utils/style/common.wxss";
+
+.box {
+  /* 使用iPhone6机型来测试 */
+  /* width: 200rpx; */
+  /* calc属性 css和wxss都支持 */
+  width: calc(750rpx / 375 * 100);
+  height: 200rpx;
+  background-color: red;
+}
