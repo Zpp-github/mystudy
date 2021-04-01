@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "小森购物--订单页面"
+}

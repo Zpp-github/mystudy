@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput": "../../components/SearchInput/SearchInput",
+    "Tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "小森购物--结算页面"
+}
